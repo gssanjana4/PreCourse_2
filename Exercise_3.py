@@ -29,13 +29,15 @@ class LinkedList:
     # Function to get the middle of  
     # the linked list 
     def printMiddle(self): 
+        if self.head is None:
+            return None
+        
+        slow = self.head
+        fast = self.head
 
-        slow = head
-        fast = head
-
-        while fast is not None and fast.next is not None:
-            slow = slow.next
-            fast = fast.next.next
+        while fast is not None and fast.nxt is not None:
+            slow = slow.nxt
+            fast = fast.nxt.nxt
         
         return slow.data
 
