@@ -2,7 +2,7 @@
 # Time Complexity: O(n) - to traverse the list to find the mid element
 # Space Complexity O(1) 
 # Did this code successfully run on Leetcode : Yes
-# and # Any problem you faced while coding this : No
+# Any problem you faced while coding this : No
 # For even length, returns the second middle node.
 
 class Node:  
@@ -29,17 +29,28 @@ class LinkedList:
     # Function to get the middle of  
     # the linked list 
     def printMiddle(self): 
-        curr = self.head
-        mid = self.cnt // 2
-        while curr is not None:
-            if mid == 0:
-                print(curr.data)
-                return curr.data
-            
-            mid = mid - 1
-            curr = curr.nxt
 
-        return None
+        slow = head
+        fast = head
+
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+        
+        return slow.data
+
+    
+        # curr = self.head
+        # mid = self.cnt // 2
+        # while curr is not None:
+        #     if mid == 0:
+        #         print(curr.data)
+        #         return curr.data
+            
+        #     mid = mid - 1
+        #     curr = curr.nxt
+
+        # return None
 
     def to_list(self):
         curr = self.head
@@ -49,7 +60,6 @@ class LinkedList:
             curr = curr.nxt
 
         return result
-
 
 
 list1 = LinkedList() 
