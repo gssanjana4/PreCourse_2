@@ -1,6 +1,6 @@
 # Python program for implementation of Quicksort
 
-# Time Complexity: O(n logn) - we halve the list every time we iterate and O(n) for the going over the stack for best case and worst case O(n^2)
+# Time Complexity: O(n logn) - we splits the list every time near middle we iterate and O(n) for the going over the stack for best case and worst case O(n^2)
 # Space Complexity: O(log n) - for stack overhead and O(n) - worst case
 
 # This function is same in both iterative and recursive
