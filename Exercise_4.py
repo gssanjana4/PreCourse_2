@@ -1,5 +1,5 @@
 # Python program for implementation of MergeSort 
-#Time Complexity: O(n log n) - we halve the calculation every time into half
+#Time Complexity: O(n log n) - we halve the calculation every time into half and n for merging both list
 # Space Complexity: O(n) - for storing left and right list,  O(log n) - for recrusion stack
 
 def mergeSort(arr):
